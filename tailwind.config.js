@@ -1,3 +1,5 @@
+const { blackA } = require('@radix-ui/colors')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,10 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      gridTemplateColumns: {
+        22: 'repeat(22, minmax(0, 1fr))',
+      },
+      colors: {
+        ...blackA,
       },
     },
   },
