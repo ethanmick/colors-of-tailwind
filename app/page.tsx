@@ -7,6 +7,8 @@ import * as colors from 'tailwindcss/colors'
 import { ColorButton } from './button'
 import { Switch } from './switch'
 
+const inter = Inter({ subsets: ['latin'] })
+
 const PALETTES: Array<keyof typeof colors> = [
   'slate',
   'gray',
@@ -46,8 +48,6 @@ const STEPS: Array<keyof typeof colors['slate']> = [
   '950',
 ]
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   const [includeHexChar, setIncludeHexChar] = useState(true)
   return (
@@ -72,7 +72,7 @@ export default function Home() {
                   >
                     <ColorButton
                       includeHexChar={includeHexChar}
-                      color={colors[p][s]}
+                      palette={p}
                       step={s}
                     />
                   </li>

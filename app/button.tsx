@@ -1,21 +1,25 @@
 'use client'
 
 import { CheckCircle } from '@phosphor-icons/react'
+import va from '@vercel/analytics'
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
+import * as colors from 'tailwindcss/colors'
 
 type Props = {
   includeHexChar: boolean
-  color: string
-  step: string
+  palette: keyof typeof colors
+  step: keyof typeof colors['slate']
 }
 
-export const ColorButton = ({ includeHexChar, color, step }: Props) => {
+export const ColorButton = ({ includeHexChar, palette, step }: Props) => {
   const [copied, setCopied] = useState(false)
 
   const onClick = () => {
+    const color = colors[palette][step]
     setCopied(true)
     navigator.clipboard.writeText(includeHexChar ? color : color.slice(1))
+    va.track('Color Copied', { palette, step })
   }
 
   useEffect(() => {
