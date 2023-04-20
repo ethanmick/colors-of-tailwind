@@ -59,7 +59,7 @@ export default function Home() {
               <h2 className="capitalize font-light text-sm md:text-base flex justify-center items-center h-12">
                 {p}
               </h2>
-              <ul className="flex flex-col h-screen">
+              <ul className="flex flex-col h-[calc(100vh-3rem)]">
                 {STEPS.map((s) => (
                   <li
                     key={s}
