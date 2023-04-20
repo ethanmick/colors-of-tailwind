@@ -1,8 +1,8 @@
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 export const metadata = {
-  title: 'Tailwind CSS Colors | Click to Copy',
-  description: 'The fastest way to get the Tailwind color you want.',
+  title: 'Colors of Tailwind | Click to Copy',
+  description: 'The fastest way to get the Tailwind CSS color you want.',
 }
 
 export default function RootLayout({
