@@ -34,7 +34,7 @@ export const ColorButton = ({ includeHexChar, palette, step }: Props) => {
     <button
       onClick={onClick}
       className={clsx(
-        'absolute inset-0 font-bold flex justify-center items-center group opacity-0 transition-opacity duration-300 hover:opacity-80',
+        'absolute inset-0 font-bold flex justify-center items-center group opacity-0 transition-opacity duration-300 hover:opacity-80 w-full',
         {
           'text-white': parseInt(step, 10) > 400,
         }
