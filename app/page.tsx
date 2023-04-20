@@ -59,12 +59,12 @@ export default function Home() {
               <h2 className="capitalize font-light text-sm md:text-base flex justify-center items-center h-12">
                 {p}
               </h2>
-              <ul className="flex flex-col h-[calc(100vh-6rem)]">
+              <ul className="flex flex-col h-screen">
                 {STEPS.map((s) => (
                   <li
                     key={s}
                     className={clsx(
-                      'flex-grow flex justify-center items-center relative z-0 transition hover:shadow-[0_2px_5px_-1px_rgba(50,50,93,.25),_0_1px_3px_-1px_rgba(0,0,0,.3)] hover:z-1'
+                      'flex-grow flex justify-center items-center relative z-0 transition hover:shadow-lg hover:z-10'
                     )}
                     style={{
                       backgroundColor: colors[p][s],
