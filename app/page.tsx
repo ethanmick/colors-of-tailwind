@@ -52,11 +52,11 @@ export default function Home() {
   const [includeHexChar, setIncludeHexChar] = useState(true)
   return (
     <main className={inter.className}>
-      <div className="grid grid-cols-22">
+      <div className="grid grid-cols-6 md:grid-cols-8 lg:grid-cols-11 xl:grid-cols-22">
         {PALETTES.map((p) => (
           <React.Fragment key={p}>
             <div className="flex-grow">
-              <h2 className="capitalize font-light flex justify-center items-center h-12">
+              <h2 className="capitalize font-light text-sm md:text-base flex justify-center items-center h-12">
                 {p}
               </h2>
               <ul className="flex flex-col h-[calc(100vh-6rem)]">
@@ -82,7 +82,7 @@ export default function Home() {
           </React.Fragment>
         ))}
       </div>
-      <div className="h-12 flex items-center px-4 justify-between bg-black">
+      <div className="h-full xl:h-12 flex flex-col lg:flex-row py-4 items-center px-4 justify-between bg-black gap-4">
         <form className="flex items-center">
           <label
             className="text-[15px] leading-none pr-[15px] text-white font-semibold"
@@ -103,7 +103,7 @@ export default function Home() {
         <div className="text-lg text-white">Click to Copy Tailwind Color</div>
         <div>
           <a
-            className="text-indigo-500 visited:text-indigo-800 hover:underline"
+            className="text-indigo-500 visited:text-indigo-700 hover:underline"
             href="https://ethanmick.com"
           >
             Made by Ethan Mick
